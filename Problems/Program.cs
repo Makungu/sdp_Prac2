@@ -12,13 +12,14 @@ namespace Problems
 
         public string Prefix(string input)
         {
-            int length = 0;
             string[] words = input.Split(" ");
-            for (int n =0; n < input.Length;n++)
-            {
-                length++;
+            int WordCount =0;
+            foreach (string s in words){
+                if (!(s == "" || s== " ")){
+                    WordCount++;
+                }
             }
-            return $"{length},{words.Length}:{input} ";
+            return $"{input.Length},{WordCount}:{input}";
         }
     }
    
